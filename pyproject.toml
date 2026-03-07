@@ -1,5 +1,5 @@
 [project]
-name = "flashdir"
+name = "src"
 version = "0.0.1"
 description = "Simple project for my practice. Copies files from folder on the computer and transit them into another pc."
 authors = [
@@ -15,3 +15,6 @@ dependencies = [
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[project.scripts]
+venv-setup-paths = "utils.setup_paths.poetry_paths:setup"
