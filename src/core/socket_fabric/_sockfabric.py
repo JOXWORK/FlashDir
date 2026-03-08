@@ -1,9 +1,10 @@
 import socket
 from functools import wraps
 from core.config import settings
+from types import FunctionType
 
 
-def sockfab(func):
+def sockfab(func: FunctionType):
     @wraps(func)
     def wrapper(*args, **kwargs):
         with socket.socket(settings.SOCK_FAMILY, settings.SOCK_TYPE) as sock:
